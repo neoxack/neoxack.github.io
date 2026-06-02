@@ -152,17 +152,22 @@
             endpointId: 'anonymizer-pg.Website',
             serviceDomain: 'anonymizer-regular.a.mindbox.ru'
         });
+        mindbox("webpush.create");
     </script>
 </head>
 <body>
     <div class="container">
         <h1>ANONYMIZER TEST</h1>
-        <button class="btn" onclick="handleClick()">Initialize</button>
+        <button class="btn" onclick="handleClick()">Подписка на webpush</button>
     </div>
 
     <script>
         function handleClick() {
-            console.log('Anonymizer integration button clicked');
+            mindbox("webpush.subscribe", {
+                onGranted: function () {},
+                onDenied: function () {}
+            });
+            console.log('webpush.subscribe button clicked');
         }
     </script>
 </body>
