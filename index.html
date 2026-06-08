@@ -143,14 +143,14 @@
         }
     </style>
     
-    <script src="https://api-staging.mindbox.ru/scripts/v1/tracker.js" nonce="" async=""></script>
+    <script src="https://api.b.mindbox.ru/scripts/v1/tracker.js" nonce="" async=""></script>
     <script nonce="test">
         mindbox = window.mindbox || function () { mindbox.queue.push(arguments); };
         mindbox.queue = mindbox.queue || [];
 
         mindbox("create", {
-            endpointId: 'anonymizer-pg.Website',
-            serviceDomain: 'anonymizer-regular.a.mindbox.ru'
+            endpointId: 'anonymizer-demo.Website',
+            serviceDomain: 'anonymizer-demo-api-regular.mindbox.ru'
         });
         mindbox("webpush.create");
     </script>
